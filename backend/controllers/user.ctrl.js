@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const login = async (req,res,next) => {
     try{
         const {email,password} = req.body;
-        const users = [{email:"admin@gmail.com",name:"anubhav",password:"1234"}];
+        const users = [{email:"admin@gmail.com",name:"admin-name",password:"1234"}];
         var user =null;
         users.filter(element => {
             if(element.email === email)
@@ -68,7 +68,7 @@ const login = async (req,res,next) => {
         if(req.headers.hasOwnProperty('cookie')){
             const token = req.cookies.accessToken;
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
-            const users = [{email:"admin@gmail.com",name:"anubhav",password:"1234"}];
+            const users = [{email:"admin@gmail.com",name:"admin-name",password:"1234"}];
             var user =null;
             users.filter(element => {
                 if(element.email === decoded.email)

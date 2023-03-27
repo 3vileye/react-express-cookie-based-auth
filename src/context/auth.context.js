@@ -4,8 +4,6 @@ import {
     createContext,
     useContext,
     useRef,
-    Dispatch,
-    SetStateAction,
   } from 'react'
 import { useDispatch } from 'react-redux';
 import { logOut,setCredentials } from '../state/auth.slice';
