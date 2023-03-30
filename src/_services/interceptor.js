@@ -13,7 +13,8 @@ export function setupAxios(axios) {
       }, async function (err) {
         const originalConfig = err.config;
         if(err.response.status === 403 &&err.response.data.message ==='session expired'){
-          window.location = '/login'
+          window.location = '/login';
+          localStorage.removeItem('isLogedIn')
         }
         if (err.response.status === 401 && !originalConfig._retry) {
           originalConfig._retry = true;

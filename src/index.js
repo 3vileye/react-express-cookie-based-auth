@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import axios from 'axios';
 import { AuthProvider } from './context/auth.context';
+import { TitleProvider } from './context/Title.context';
 import { AppRoutes } from './routes/AppRoutes';
 import { Provider } from 'react-redux';
 import {store} from './state/store';
@@ -14,7 +15,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <AuthProvider>
-        <AppRoutes />
+        <TitleProvider>
+          <AppRoutes />
+        </TitleProvider>
       </AuthProvider>
     </Provider>
   </React.StrictMode>

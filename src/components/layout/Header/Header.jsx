@@ -27,16 +27,8 @@ function Header(){
     }
 
     return (
-        <AppBar component="nav">
+        <AppBar color="secondary" component="nav">
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant="h6"
             component="div"
