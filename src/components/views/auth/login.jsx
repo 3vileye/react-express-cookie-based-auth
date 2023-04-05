@@ -17,7 +17,7 @@ import { useDispatch } from 'react-redux';
 import { setCredentials } from '../../../state/auth.slice';
 import { useAuth } from '../../../context/auth.context';
 import axios from 'axios';
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 function Copyright(props) {

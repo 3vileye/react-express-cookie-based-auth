@@ -1,16 +1,11 @@
 import {
     useState,
-    useEffect,
     createContext,
-    useContext,
-    useRef,
+    useContext
   } from 'react'
-import { useDispatch } from 'react-redux';
-import { logOut,setCredentials } from '../state/auth.slice';
-import axios from 'axios';
 
   const initTitleContextPropsState = {
-    title: 'page-title'
+    title: null
   }
   const TitleContext = createContext(initTitleContextPropsState)
   
@@ -20,7 +15,6 @@ import axios from 'axios';
   
   const TitleProvider= ({children}) => {
     const [title, setTitle] = useState(initTitleContextPropsState.title)
-    console.log(title);
     return (
       <TitleContext.Provider value={{title,setTitle}}>
         {children}
